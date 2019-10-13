@@ -5,9 +5,9 @@
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
                       <div class="card card-register">
-                          <h3 class="title">Welcome</h3>
+                          <h3 class="title">Bienvenido</h3>
                           <div class="social-line text-center">
-                              <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
+                              <!-- <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
                                   <i class="fa fa-facebook-square"></i>
                               </a>
                               <a href="#pablo" class="btn btn-neutral btn-google btn-just-icon">
@@ -15,10 +15,10 @@
                               </a>
                               <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
                                   <i class="fa fa-twitter"></i>
-                              </a>
+                              </a> -->
                           </div>
                           <form class="register-form">
-                              <label>Email</label>
+                              <label>Usuario</label>
                               <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text">
@@ -26,22 +26,22 @@
                                   </span>
                                 </div>
 
-                                  <input type="text" class="form-control" placeholder="Email" (focus)="focus=true" (blur)="focus=false" >
+                                  <input type="text" class="form-control" placeholder="Usuario" (focus)="focus=true" (blur)="focus=false" name="usuario"  [(ngModel)]="usuarioSistema.usuario">
                               </div>
 
-                              <label>Password</label>
+                              <label>Clave</label>
                               <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text">
                                       <i class="nc-icon nc-key-25"></i>
                                   </span>
                                 </div>
-                                  <input type="text" class="form-control" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" >
+                                  <input type="text" class="form-control" placeholder="Clave" (focus)="focus1=true" (blur)="focus1=false" name="clave" [(ngModel)]="usuarioSistema.contrasen">
                               </div>
-                              <button class="btn btn-danger btn-block btn-round">Register</button>
+                              <button class="btn btn-danger btn-block btn-round" (click)="login()" >Registrar</button>
                           </form>
                           <div class="forgot">
-                              <a href="#" class="btn btn-link btn-danger">Forgot password?</a>
+                              <a href="#" class="btn btn-link btn-danger">¿Olvidó su clave?</a>
                           </div>
                       </div>
                     </div>

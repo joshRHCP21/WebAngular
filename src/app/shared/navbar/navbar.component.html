@@ -38,9 +38,10 @@
                     <a href="http://pk2-angular.creative-tim.com/documentation/tutorial" class="nav-link" target="_blank"><i class="nc-icon nc-book-bookmark"></i> Documentation</a>
                 </li>
                 <li class="nav-item" *ngIf="isHome()">
-                    <a href="" target="_blank" class="btn btn-danger btn-round">INICIAR SESIÓN</a>
+                    <a [routerLink]="['/signup']" class="btn btn-danger btn-round">INICIAR SESIÓN</a>
                     <!-- https://www.creative-tim.com/product/paper-kit-2-pro-angular?ref=pk2-angular-free-local -->
                 </li>
+
                 <li class="nav-item" *ngIf="!isHome()">
                     <a [routerLink]="['/home']" *ngIf="!isDocumentation()" class="nav-link"><i class="nc-icon nc-layout-11"></i>Components</a>
                     <a [routerLink]="['/home']" *ngIf="isDocumentation()" class="nav-link">Back to Kit</a>
