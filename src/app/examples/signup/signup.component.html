@@ -38,7 +38,23 @@
                                 </div>
                                   <input type="text" class="form-control" placeholder="Clave" (focus)="focus1=true" (blur)="focus1=false" name="clave" [(ngModel)]="usuarioSistema.contrasen">
                               </div>
-                              <button class="btn btn-danger btn-block btn-round" (click)="login()" >Registrar</button>
+                                <br *ngIf="mostrarAlerta">
+
+                              <p *ngFor="let alert of alerts" >
+                                <ngb-alert [type]="alert.type"  [dismissible]="false" *ngIf="mostrarAlerta">
+                                    <div class="container">
+                                        <ng-container *ngIf="alert.icon">
+                                            <i class="nc-icon {{alert.icon}}"></i>
+                                        </ng-container>                            
+                                        <label style="font-size: 10px; margin-left: 7px;">{{ alert.message }}</label>
+                                        <button type="button" name="button" class="close" (click)="closeAlert(alert)">
+                                            <i class="nc-icon nc-simple-remove"></i>
+                                        </button>
+                                    </div>
+                                </ngb-alert>
+                            </p>                   
+
+                              <button class="btn btn-danger btn-block btn-round" (click)="login()" >Inciar Sesión</button>
                           </form>
                           <div class="forgot">
                               <a href="#" class="btn btn-link btn-danger">¿Olvidó su clave?</a>
