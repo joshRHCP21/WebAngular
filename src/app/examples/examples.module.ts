@@ -7,6 +7,7 @@ import { LandingComponent } from './landing/landing.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { SignUpService } from './signup/services/signup.services';
+import { RegisterUserComponent } from './register-user/register-user.component';
 
 @NgModule({
     imports: [
@@ -17,7 +18,8 @@ import { SignUpService } from './signup/services/signup.services';
     declarations: [
         LandingComponent,
         SignupComponent,
-        ProfileComponent
+        ProfileComponent,
+        RegisterUserComponent,
         
     ],
     providers: [SignUpService]

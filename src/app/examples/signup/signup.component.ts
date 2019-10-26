@@ -57,6 +57,7 @@ export class SignupComponent implements OnInit {
                 this.mostrarAlerta = false;
                 this.usuarioSistema=data;
                 window.location.href = 'http://localhost:4201/#/';
+                console.log('Usuario correcto');
             }
         });
     }

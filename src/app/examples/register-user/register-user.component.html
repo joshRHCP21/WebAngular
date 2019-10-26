@@ -1,0 +1,71 @@
+<div class="wrapper">
+  <div class="page-header" style="background-image: url('./assets/img/login-image.jpg');">
+      <div class="filter"></div>
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
+                    <div class="card card-register">
+                        <h3 class="title">Registro</h3>
+                        <div class="social-line text-center">                
+                        </div>
+                        <form class="register-form" >
+                            <label>DNI Representante I.E.</label>
+                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nc-icon nc-email-85"></i>
+                                </span>
+                              </div>
+
+                                <input type="text" class="form-control" placeholder="DNI Representante Legal" (focus)="focus=true" (blur)="focus=false" name="usuario" #dniRepresentante>
+                            </div>
+
+                            <label>Cod Modular I.E.</label>
+                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nc-icon nc-key-25"></i>
+                                </span>
+                              </div>
+                                <input type="text" class="form-control" placeholder="Código modular" (focus)="focus1=true" (blur)="focus1=false" name="clave" #codModularColegio>
+                            </div>
+                            <div *ngIf="mostrarVentanaAutenticacion">
+                              <label>Código de autenticación</label>
+                              <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                      <i class="nc-icon nc-key-25"></i>
+                                  </span>
+                                </div>
+                                  <input type="text" class="form-control" placeholder="Ingrese la clave de autenticación" (focus)="focus1=true" (blur)="focus1=false" name="codAutenticación" #codAutenticación>
+                              </div>  
+                            </div>                            
+
+                            <br *ngIf="mostrarAlerta">
+
+                            <p *ngFor="let alert of alerts" >
+                              <ngb-alert [type]="alert.type"  [dismissible]="false" *ngIf="mostrarAlerta">
+                                  <div class="container">
+                                      <ng-container *ngIf="alert.icon">
+                                          <i class="nc-icon {{alert.icon}}"></i>
+                                      </ng-container>                            
+                                      <label style="font-size: 10px; margin-left: 7px;">{{ alert.message }}</label>
+                                      <button type="button" name="button" class="close" (click)="closeAlert(alert)">
+                                          <i class="nc-icon nc-simple-remove"></i>
+                                      </button>
+                                  </div>
+                              </ngb-alert>
+                          </p>                   
+
+                            <button class="btn btn-danger btn-block btn-round" (click)="register()" >Registrarse</button>
+                        </form>
+                
+                    </div>
+                  </div>
+              </div>
+              <div class="footer register-footer text-center">
+                  <h6>&copy;{{test | date: 'yyyy'}}</h6>
+              </div>
+          </div>
+  </div>
+</div>

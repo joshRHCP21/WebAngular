@@ -71,4 +71,9 @@ export class NavbarComponent implements OnInit {
             return false;
         }
     }
+
+    useRegister() {
+        window.location.href = 'http://localhost:4201/#/home';
+        console.log('Usuario correcto');
+    }
 }
