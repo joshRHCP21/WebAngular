@@ -115,6 +115,8 @@ export class RegisterUserComponent implements OnInit {
                       if(data !== null && data !== undefined)
                       {
                         console.log("SE GUARDÓ ");
+                        
+
                       }
                     
                     });

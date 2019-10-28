@@ -62,6 +62,8 @@ export class SignupComponent implements OnInit {
         });
     }
 
+    //Dashboard = 4200
+    //Client    = 4201
 
     public closeAlert(alert: IAlert) {
         // const index: number = this.alerts.indexOf(alert);
