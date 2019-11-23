@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { SignUpService } from './services/signup.services';
 import { Router } from '@angular/router';
 import { UsuarioSistema } from './domain/UsuarioSistema';
+import { TipoUsuario } from './domain/TipoUsuario';
+import { store } from '@angular/core/src/render3';
 
 @Component({
     selector: 'app-signup',
@@ -56,8 +58,10 @@ export class SignupComponent implements OnInit {
             if(data !== null && data !== undefined){
                 this.mostrarAlerta = false;
                 this.usuarioSistema=data;
+                console.log(data);
+                localStorage.setItem("tipoUsuario",data.idTipoUsuSist.idTipousu+"");
                 window.location.href = 'http://localhost:4201/#/';
-                console.log('Usuario correcto');
+                alert('Usuario correcto');
             }
         });
     }
@@ -72,8 +76,6 @@ export class SignupComponent implements OnInit {
         this.mostrarAlerta = false;
 
     }
-
-
 
 
 }

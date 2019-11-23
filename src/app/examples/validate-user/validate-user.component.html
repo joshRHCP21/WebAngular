@@ -5,7 +5,7 @@
               <div class="row">
                   <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
                     <div class="card card-register">
-                        <h3 class="title">Registro</h3>
+                        <h3 class="title">VALIDAR</h3>
                         <div class="social-line text-center">                
                         </div>
                         <form class="register-form" >
@@ -29,7 +29,18 @@
                               </div>
                                 <input type="text" class="form-control" placeholder="Código modular" (focus)="focus1=true" (blur)="focus1=false" name="clave" #codModularColegio>
                             </div>
-                            
+                            <div>
+                              <label>Código de autenticación</label>
+                              <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                      <i class="nc-icon nc-key-25"></i>
+                                  </span>
+                                </div>
+                                  <input type="text" class="form-control" placeholder="Ingrese la clave de autenticación" (focus)="focus1=true" (blur)="focus1=false" name="codAutenticación" #codAutenticación>
+                              </div>  
+                            </div>                            
+
                             <br *ngIf="mostrarAlerta">
 
                             <p *ngFor="let alert of alerts" >
@@ -46,7 +57,7 @@
                               </ngb-alert>
                           </p>                   
 
-                            <button class="btn btn-danger btn-block btn-round" (click)="register()" >Registrarse</button>
+                            <button class="btn btn-danger btn-block btn-round" (click)="validarCuenta()" >Validar cuenta</button>
                         </form>
                 
                     </div>

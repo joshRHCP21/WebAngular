@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { SignUpService } from './signup/services/signup.services';
 import { RegisterUserComponent } from './register-user/register-user.component';
+import { ValidateUserComponent } from './validate-user/validate-user.component';
 
 @NgModule({
     imports: [
@@ -20,6 +21,7 @@ import { RegisterUserComponent } from './register-user/register-user.component';
         SignupComponent,
         ProfileComponent,
         RegisterUserComponent,
+        ValidateUserComponent,
         
     ],
     providers: [SignUpService]

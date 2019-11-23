@@ -16,7 +16,7 @@ export class SignUpService {
 
   getPersonaId(usuario: String, contrasena: String )
   {
-    return this.http.get<UsuarioSistema>(this.Url+"/login/"+usuario+'/'+contrasena);
+    return this.http.get<UsuarioSistema>(this.Url+"/login/"+usuario+'/'+contrasena);    
   }
 
 }
