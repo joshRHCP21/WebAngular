@@ -165,7 +165,7 @@ export class ValidateUserComponent implements OnInit {
                                   localStorage.setItem('dniRepresentanteColegio',this.validacionRegistro.dniValRegUsuario+"");                        
                                   localStorage.setItem('correoRepresentanteColegio',this.validacionRegistro.correoValRegUsuario+"");  
                                   
-                                  localStorage.setItem('sesionIniciada',"S");  
+                                    
 
                                   window.location.href = 'http://localhost:4200/#/signup';
           

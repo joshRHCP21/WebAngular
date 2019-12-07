@@ -60,6 +60,7 @@ export class SignupComponent implements OnInit {
                 this.usuarioSistema=data;
                 console.log(data);
                 localStorage.setItem("tipoUsuario",data.idTipoUsuSist.idTipousu+"");
+                localStorage.setItem('sesionIniciada',"S");
                 window.location.href = 'http://localhost:4201/#/';
                 alert('Usuario correcto');
             }
